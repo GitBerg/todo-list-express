@@ -1,0 +1,18 @@
+<%- include('../layouts/header', {title: 'Edit Checklist' }) %>
+<%- include('../layouts/menu') %>
+
+        <section class="section">
+            <div class="container">
+                <h1 class="title size-4">Editar Lista de Tarefas</h1>
+                <h4 class="subtitle size-2"><%=checklist.name%></h4>
+
+                <%- include('./form', {url:`/checklists/${checklist.id}?_method=put`, checklist:checklist}) %>
+
+                    <button type="submit" class="button is-success">Salvar</button>
+                    <a href="/checklists" class="button">Cancelar</a>
+                </form>
+            </div>
+        </section>
+
+
+<%- include('../layouts/footer') %>
